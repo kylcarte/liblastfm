@@ -1,0 +1,54 @@
+name: liblastfm-examples
+version: 0.1.0.0
+synopsis: Examples for liblastfm
+license: MIT
+license-file: LICENSE
+author: Matvey Aksenov, Dmitry Malikov
+maintainer: Matvey Aksenov <matvey.aksenov@gmail.com>
+category: Network APIs
+description: Haddock documentation isn't enough to get feeling of the library
+cabal-version: >= 1.8
+build-type: Simple
+
+executable sort-friends
+  build-depends: base >= 3 && < 5,
+                 liblastfm >= 0.0.4.0,
+                 async,
+                 text,
+                 aeson,
+                 lens,
+                 aeson-lens
+  main-is: sort-friends.hs
+  ghc-options: -Wall
+               -fno-warn-unused-do-bind
+               -threaded
+
+executable multitag-search
+  build-depends: base >= 3 && < 5,
+                 liblastfm >= 0.0.4.0,
+                 text,
+                 lens,
+                 aeson
+  main-is: multitag-search.hs
+  ghc-options: -Wall
+               -fno-warn-unused-do-bind
+
+executable web-authentication
+  build-depends: base >= 3 && < 5,
+                 liblastfm >= 0.0.4.0,
+                 happstack-server,
+                 transformers,
+                 lens,
+                 aeson-lens
+  main-is: web-authentication.hs
+  ghc-options: -Wall
+               -fno-warn-unused-do-bind
+
+executable desktop-authentication
+  build-depends: base >= 3 && < 5,
+                 liblastfm >= 0.0.4.0,
+                 lens,
+                 aeson-lens
+  main-is: desktop-authentication.hs
+  ghc-options: -Wall
+               -fno-warn-unused-do-bind
