@@ -1,5 +1,5 @@
 name: liblastfm
-version: 0.1.0.0
+version: 0.1.1.0
 synopsis: Lastfm API interface
 license: MIT
 license-file: LICENSE
@@ -13,13 +13,12 @@ build-type: Simple
 
 library
   build-depends: base >= 3 && < 5,
-                 bytestring >= 0.9 && < 0.11,
+                 bytestring,
                  containers >= 0.5,
                  text,
                  cereal,
                  http-conduit,
                  http-types,
-                 mtl,
                  pureMD5,
                  crypto-api,
                  network,
